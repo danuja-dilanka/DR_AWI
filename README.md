@@ -1,7 +1,7 @@
 # DR_AWI
 PHP Image Editing Library For Image Cropping , Coping , Moving , Resizing , Scaling , Text Adding , Effect Adding , Rotating & Many More Functionality
 
-# Getting Started With DR AWI
+## Getting Started With DR AWI
 
 <?php
 namespace DR_AWI;
@@ -19,9 +19,9 @@ $img = new AWI($IMAGE);
  
  
 */
-# EDITING
+## EDITING
 
-# Resize Image
+### Resize Image
 
 $img->resizeIt($width ,$height );
  
@@ -31,7 +31,7 @@ $img->resizeIt($width ,$height );
  $height >> Preferred IMAGE HEIGHT In PIXELS 
  
 * 
-# EASY RESIZING ---------------------------------
+#### EASY RESIZING ---------------------------------
  
  IF >> $width > 0 AND $width < 5
    $width :
@@ -42,7 +42,7 @@ $img->resizeIt($width ,$height );
          $height= $actualImageHeight / (2 ** $height) 
  
 */
-# Crop Image
+### Crop Image
 
 $img->set_size($width ,$height );
 $img->crop_starting_pos($position);
@@ -53,7 +53,7 @@ $img->crop_starting_pos($position);
  $height >> Preferred IMAGE HEIGHT To Crop (In PIXELS)
  
 * 
-# EASY CROPPING ---------------------------------
+#### EASY CROPPING ---------------------------------
  
  IF >> $width > 0 AND $width < 5
    $width :
@@ -67,7 +67,7 @@ $img->crop_starting_pos($position);
  
 /*
  
-# SET CROP POSITION ---------------------------------
+#### SET CROP POSITION ---------------------------------
  
 $position >> 
  
@@ -85,7 +85,7 @@ $position >>
         $Y = Postion Y In Pixels 
          Ex: '0,0'
 */
-Image Rotating
+### Image Rotating
 
 $img->rotateIt( $degree,$uncoveredColor);
  
@@ -100,7 +100,7 @@ $uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
      $blue= 0 - 255
  
 */
-# Set Borders
+### Set Borders
 
 $img->setBorder($borderSize, $borderColor, $borderType);
  
@@ -115,7 +115,7 @@ $borderType >> (Optional - Default 'A')
     'R' >> Only Border Right
     'B' >> Only Border Bottom
 */
-# Add Text
+### Add Text
 
 $img->setFont($fontNo, $fontSize, $fontColour);
 $img->setTextShadow($Ygap, $shadowColor);
@@ -158,7 +158,7 @@ $textPos >> Position Of Text
          Ex: '0,0'
  
 */
-Add New Image
+### Add New Image
 
 $img->addNewImage($imgSrc, $imgSize, $imgPos, $layerEffect);
  
@@ -184,7 +184,7 @@ $layerEffect - Add Image With Layer Effect
            'EFF_NORMAL' ,  'EFF_OVERLAY'  , 'EFF_MULTIPLY'
  
 */
-# Save Image
+### Save Image
 
 $img->saveIt($target_path, $createDir, $deleteSource)
  
@@ -198,7 +198,7 @@ $deleteSource - If Original Image Is On Your Server , (Default 0)
              0 - Do Not Delete Original File After Editing It
              1 - Delete Original File After Editing It
 */
-# Get Edited Image Without Saving It
+### Get Edited Image Without Saving It
 
 $img_name = $img->getImage64BaseString();
 ?>
