@@ -26,7 +26,6 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Include Files](#include-files)
-  * [Installation](#installation)
 * [Usage](#usage)
 
 
