@@ -1,204 +1,204 @@
-# DR_AWI
-PHP Image Editing Library For Image Cropping , Coping , Moving , Resizing , Scaling , Text Adding , Effect Adding , Rotating & Many More Functionality
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-## Getting Started With DR AWI
 
-<?php
-namespace DR_AWI;
-require dirname(__FILE__) . '/inc/combine.php';
-use DR_AWI\AWI as AWI;
-Usage
 
-$img = new AWI($IMAGE);
- 
-/*
- 
- 
- $IMAGE >> CAN BE AN URL OR A PATH OR A BASE64 ENCODED IMAGE STRING.
- Currently Supported Image Types : JPG/JPEG , PNG , WBMP , XBM , GIF
- 
- 
-*/
 
-## Resize Image
 
-$img->resizeIt($width ,$height );
- 
-/*
- 
- $width >> Preferred IMAGE WIDTH In PIXELS 
- $height >> Preferred IMAGE HEIGHT In PIXELS 
- 
-* 
-### EASY RESIZING ---------------------------------
- 
- IF >> $width > 0 AND $width < 5
-   $width :
-         $width = $actualImageWidth / (2 ** $width) 
- 
- IF >> $height > 0 AND $height < 5
-   $height :
-         $height= $actualImageHeight / (2 ** $height) 
- 
-*/
-## Crop Image
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-$img->set_size($width ,$height );
-$img->crop_starting_pos($position);
- 
-/*
- 
- $width >> Preferred IMAGE WIDTH To Crop (In PIXELS) 
- $height >> Preferred IMAGE HEIGHT To Crop (In PIXELS)
- 
-* 
-### EASY CROPPING ---------------------------------
- 
- IF >> $width > 0 AND $width < 5
-   $width :
-         $width = $actualImageWidth / (2 ** $width) 
- 
- IF >> $height > 0 AND $height < 5
-   $height :
-         $height= $actualImageHeight / (2 ** $height) 
- 
-*/
- 
-/*
- 
-### SET CROP POSITION ---------------------------------
- 
-$position >> 
- 
-    'TL' >> TOP LEFT
-    'TM' >> TOP MIDDLE
-    'TR' >> TOP RIGHT
-    'ML' >> TOP LEFT
-    'M'  >> MIDDLE
-    'MR' >> MIDDLE RIGHT
-    'BL' >> BOTTOM LEFT
-    'BM' >> BOTTOM MIDDLE
-    'BR' >> BOTTOM RIGHT
-    '$X,$Y' >> CUSTOM POSITION
-        $X = Postion X In Pixels 
-        $Y = Postion Y In Pixels 
-         Ex: '0,0'
-*/
-## Image Rotating
 
-$img->rotateIt( $degree,$uncoveredColor);
- 
-/*
- 
-$degree >> DEGREE TO ROTATE IMAGE
- 
-$uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
-   '$red,$green,$blue'
-     $red = 0 - 255
-     $green= 0 - 255
-     $blue= 0 - 255
- 
-*/
-## Set Borders
 
-$img->setBorder($borderSize, $borderColor, $borderType);
- 
-/*
- 
-$borderSize >> Border Size In Pixels
-$borderColor >> Border Color 
-    Ex: '0,0,0'
-$borderType >> (Optional - Default 'A')
-    'L' >> Only Border Left
-    'T' >> Only Border Top
-    'R' >> Only Border Right
-    'B' >> Only Border Bottom
-*/
-## Add Text
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-$img->setFont($fontNo, $fontSize, $fontColour);
-$img->setTextShadow($Ygap, $shadowColor);
-$img->setCaption($theText, $textPos);
- 
-/*
-setFont() ---------------------------------------------
- 
-$fontNo = 0-5 (Still 5 Fonts Available)
-$fontSize = Font Size
-$fontColour = Font Color
-     Ex: '0,0,0'
- 
-*/
- 
-/*
-setTextShadow() -----------------------------------------
- 
-$Ygap= The (Y) Gap Between TEXT And SHADOW
-$shadowColor= Shadow Color
-     Ex: '0,0,0'
- 
-*/
- 
-/*
-setCaption() --------------------------------------------
- 
-$theText >> The Text That You Want To Display 
-$textPos >> Position Of Text
- 
-    'TL' >> TOP LEFT
-    'TM' >> TOP MIDDLE
-    'ML' >> TOP LEFT
-    'M'  >> MIDDLE
-    'BL' >> BOTTOM LEFT
-    'BM' >> BOTTOM MIDDLE
-    '$X,$Y' >> CUSTOM POSITION
-        $X = Postion X In Pixels 
-        $Y = Postion Y In Pixels 
-         Ex: '0,0'
- 
-*/
-## Add New Image
+  <h3 align="center">Best-README-Template</h3>
 
-$img->addNewImage($imgSrc, $imgSize, $imgPos, $layerEffect);
- 
-/*
-$imgSrc - Path To Image File (Supported : JPG/JPEG , PNG , GIF , WBMP , XBM)
-$imgSize - New Image Size In Pixels 
-            '250,250'
-$imgPos- New Image Position
- 
-          'TL' >> TOP LEFT
-          'TM' >> TOP MIDDLE
-          'ML' >> TOP LEFT
-          'M'  >> MIDDLE
-          'BL' >> BOTTOM LEFT
-          'BM' >> BOTTOM MIDDLE
-          '$X,$Y' >> CUSTOM POSITION
-            $X = Postion X In Pixels 
-            $Y = Postion Y In Pixels 
-              Ex: '0,0'
- 
-$layerEffect - Add Image With Layer Effect
-           'EFF_REPLACE' ,  'EFF_ALPHABLEND' ,  
-           'EFF_NORMAL' ,  'EFF_OVERLAY'  , 'EFF_MULTIPLY'
- 
-*/
-## Save Image
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</p>
 
-$img->saveIt($target_path, $createDir, $deleteSource)
- 
-/*
-$target_path - Path To Save Image
-             Ex: 'FromHere/To'
-$createDir - If Path Not Exists Then Create Directory (Default 0)
-             0 - Don't Create Directory
-             1 - Create Directory
-$deleteSource - If Original Image Is On Your Server , (Default 0)
-             0 - Do Not Delete Original File After Editing It
-             1 - Delete Original File After Editing It
-*/
-## Get Edited Image Without Saving It
 
-$img_name = $img->getImage64BaseString();
-?>
-<img src="data:image/png;base64,<?= $img_name ?>">
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should element DRY principles to the rest of your life :smile:
+
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
+
+### Built With
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Laravel](https://laravel.com)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
+3. Install NPM packages
+```sh
+npm install
+```
+4. Enter your API in `config.js`
+```JS
+const API_KEY = 'ENTER YOUR API';
+```
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Pages](https://pages.github.com)
+* [Animate.css](https://daneden.github.io/animate.css)
+* [Loaders.css](https://connoratherton.com/loaders)
+* [Slick Carousel](https://kenwheeler.github.io/slick)
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+* [Sticky Kit](http://leafo.net/sticky-kit)
+* [JVectorMap](http://jvectormap.com)
+* [Font Awesome](https://fontawesome.com)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
