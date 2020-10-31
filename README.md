@@ -55,13 +55,13 @@ use DR_AWI\AWI as AWI;
 ## Sample Images
 
 ### Original image after resize into 800 X 500 (pixels)
-<img src=“https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/1-original-image-after-resize-800%2C500.png" height="50" width="50">
+![Test Image 1](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/1-original-image-after-resize-800%2C500.png)
                                                                                                                                                       
 ### Original image after rotation into 2deg
-<img src=“https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/2-rotate.png" height="50" width="50">
+![Test Image 2](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/2-rotate.png)
                                                                                                                                                       
 ### Add black color block with EFF_OVERLAY effect
-<img src=“https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/3-add-black-color-block-with-EFF_OVERLAY-effect.png" height="50" width="50">
+![Test Image 3](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/3-add-black-color-block-with-EFF_OVERLAY-effect.png)
                                                                                                                                                       
 ### Add new same block with same effects into a differnt position
-<img src=“https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/4-add-another-black-color-block-with-EFF_OVERLAY-effect.png" height="50" width="50">
+![Test Image 4](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/4-add-another-black-color-block-with-EFF_OVERLAY-effect.png)
