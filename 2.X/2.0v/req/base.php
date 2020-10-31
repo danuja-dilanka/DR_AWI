@@ -190,14 +190,19 @@ class DR_AWI_cores {
         }
     }
 
-    protected function isASize(string $sizeCode, int $ret_type = 0) {
+    protected function isASize(string $sizeCode = null, int $ret_type = 0) {
         $oode = trim($sizeCode);
-        $sizes = explode(",", $oode);
-        if (count($sizes) == 2) {
-            $width = intval($sizes[0]);
-            $height = intval($sizes[1]);
-            if (($width > 0) || ($height > 0)) {
-                return ($ret_type != 0) ? array('x' => $width, 'y' => $height) : true;
+        if ($oode != null) {
+            $sizes = explode(",", $oode);
+            if (count($sizes) == 2) {
+                $width = intval($sizes[0]);
+                $height = intval($sizes[1]);
+                if (($width > 0) || ($height > 0)) {
+                    return ($ret_type != 0) ? array('x' => $width, 'y' => $height) : true;
+                } else {
+                    $def_data = explode(",", $this->def_size);
+                    return ($ret_type != 0) ? array('x' => intval($def_data[0]), 'y' => intval($def_data[1])) : false;
+                }
             } else {
                 $def_data = explode(",", $this->def_size);
                 return ($ret_type != 0) ? array('x' => intval($def_data[0]), 'y' => intval($def_data[1])) : false;
