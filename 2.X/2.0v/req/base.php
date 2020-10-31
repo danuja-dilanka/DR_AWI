@@ -13,25 +13,30 @@ require $required_file;
 class DR_AWI_cores {
 
     use core_var,
+        core_edits,
         core_FC,
         core_img,
         core_path,
         core_cal;
 
-    function __construct(string $src = null, string $def_size = "1200,720") {
+    function __construct(string $src = null, string $def_size = null) {
         $image_src = trim($src);
+        $def_size = ($this->isASize($def_size)) ? $def_size : $this->def_size;
         if (filter_var($image_src, FILTER_VALIDATE_URL)) {
             $serverDet = explode("/", $image_src)[2];
             $connected = fsockopen($serverDet, 80);
             if (!$connected) {
                 die("Need Internet Connection!");
             } else {
+                $size_data = $this->isASize($def_size, 1);
                 $this->src = $image_src;
+                $this->resizeIt($size_data['x'], $size_data['y']);
             }
         } elseif (file_exists($image_src)) {
+            $size_data = $this->isASize($def_size, 1);
             $this->src = $image_src;
+            $this->resizeIt($size_data['x'], $size_data['y']);
         } elseif (!file_exists($image_src)) {
-            $def_size = ($this->isASize($def_size)) ? $def_size : "1200,720";
             if ($image_src != null) {
                 ($this->isColourCode($image_src)) ? $this->setNewBG($def_size, $image_src) : $this->setNewBG($def_size);
             } else {
@@ -174,19 +179,21 @@ class DR_AWI_cores {
         }
     }
 
-    protected function isASize(string $sizeCode) {
+    protected function isASize(string $sizeCode, int $ret_type = 0) {
         $oode = trim($sizeCode);
         $sizes = explode(",", $oode);
         if (count($sizes) == 2) {
             $width = intval($sizes[0]);
             $height = intval($sizes[1]);
             if (($width > 0) || ($height > 0)) {
-                return true;
+                return ($ret_type != 0) ? array('x' => $width, 'y' => $height) : true;
             } else {
-                return false;
+                $def_data = explode(",", $this->def_size);
+                return ($ret_type != 0) ? array('x' => intval($def_data[0]), 'y' => intval($def_data[1])) : false;
             }
         } else {
-            return false;
+            $def_data = explode(",", $this->def_size);
+            return ($ret_type != 0) ? array('x' => intval($def_data[0]), 'y' => intval($def_data[1])) : false;
         }
     }
 

@@ -175,52 +175,6 @@ class Adding extends DR_AWI_img_config {
         }
     }
 
-    function resizeIt(int $newwidth, int $newheight) {
-        $resource = $this->new_resource;
-        if ($resource == null) {
-            if ($this->width == 0) {
-                $this->set_size();
-            }
-            $img = $this->new_img;
-            if ($img == null) {
-                $img = $this->create_new_img();
-            }
-            if ($this->is_resized != true) {
-                $imgWidth = $this->Wpixel;
-                $imgHeight = $this->Hpixel;
-            } else {
-                $imgWidth = $this->width;
-                $imgHeight = $this->height;
-            }
-        } else {
-            $source = $this->get_actual_size($resource);
-            $imgWidth = $source["x"];
-            $imgHeight = $source["y"];
-            $img = $resource;
-        }
-        if ($newwidth < 5 && $newwidth > 0) {
-            $newwidth = ceil($imgWidth / (2 ** $newwidth));
-        }
-        if ($newheight < 5 && $newheight > 0) {
-            $newheight = ceil($imgHeight / (2 ** $newheight));
-        }
-        $thumb = imagecreatetruecolor($newwidth, $newheight);
-        if ($thumb != FALSE) {
-            if (imagecopyresized($thumb, $img, 0, 0, 0, 0, $newwidth, $newheight, $imgWidth, $imgHeight)) {
-                if ($resource == null) {
-                    $this->new_img = $thumb;
-                    $this->width = $newwidth;
-                    $this->height = $newheight;
-                }
-                $this->is_resized = true;
-                $this->new_resource = null;
-                return $thumb;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
+   
 
 }
