@@ -51,3 +51,6 @@ namespace DR_AWI;
 require dirname(__FILE__) . '/inc/combine.php';
 use DR_AWI\AWI as AWI;
 ```
+<!-- SAMPLES -->
+## Sample Images
+![Test Image 1](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/1-original-image-after-resize-800%2C500.png)
