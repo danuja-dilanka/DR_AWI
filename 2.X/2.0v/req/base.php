@@ -78,7 +78,17 @@ class DR_AWI_cores {
         $this->img_new_name = trim($name);
     }
 
-    function saveIt(string $target_path, int $createDir = 0, int $deleteSource = 0) {
+    function saveItAs(string $imgType = "PNG") {
+        $type = strtoupper(trim($imgType));
+        for ($i = 0; $i < count($this->allow_types); $i++) {
+            if ($this->allow_types[$i] == $type) {
+                $this->img_save_type = $type;
+                break;
+            }
+        }
+    }
+
+    function saveIt(string $target_path, string $saveType = 'PNG', int $createDir = 0, int $deleteSource = 0) {
         if (!is_dir($target_path)) {
             if ($createDir == 1) {
                 $is_DirCreted = $this->creatBasePath($target_path);
@@ -89,6 +99,7 @@ class DR_AWI_cores {
                 return false;
             }
         }
+        $this->saveItAs($saveType);
         if ($this->width == 0) {
             $this->set_size();
         }
