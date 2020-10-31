@@ -52,8 +52,8 @@ require dirname(__FILE__) . '/inc/combine.php';
 use DR_AWI\AWI as AWI;
 ```
 <!-- SAMPLES -->
-## Sample Image After Edit
+## Sample Image After Editing
    
 ![Test Image 1](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/7-add-another-text-with-another-size.png)
 
-#### <a href="https://github.com/dilanka-rajapakshe/DR_AWI/tree/master/2.X/2.0v/tested">See All Images (Step Wise)</a> 
+#### <a href="https://github.com/dilanka-rajapakshe/DR_AWI/tree/master/2.X/2.0v/tested">See All Images (Step wise)</a> 
