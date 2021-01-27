@@ -33,7 +33,7 @@
    * [Image Rotating](#image-rotating)
    * [Set Borders](#set-borders)
    * [Add Text](#add-text)
-   * [Add New Image](#add-new-image)
+   * [Add New Image On Top](#add-new-image-on-top)
    * [Save Image](#save-image)
 
 
@@ -69,7 +69,7 @@ require dirname(__FILE__) . '/inc/combine.php';
 use DR_AWI\AWI as AWI;
 ```
 
-###Usage
+### Usage
 
 ```
 $img = new AWI($IMAGE);
@@ -78,9 +78,9 @@ $img = new AWI($IMAGE);
  $IMAGE >> CAN BE AN URL OR A PATH OR A BASE64 ENCODED IMAGE STRING.
  Currently Supported Image Types : JPG/JPEG , PNG , WBMP , XBM , GIF
  ```
-###EDITING
+### EDITING
 
-###Resize Image
+### Resize Image
 
 ```$img->resizeIt($width ,$height );
  
@@ -98,7 +98,7 @@ $img = new AWI($IMAGE);
          $height= $actualImageHeight / (2 ** $height) 
  
 ```
-###Crop Image
+### Crop Image
 ```
 $img->set_size($width ,$height );
 $img->crop_starting_pos($position);
@@ -135,7 +135,7 @@ $position >>
         $Y = Postion Y In Pixels 
          Ex: '0,0'
  ```   
-###Image Rotating
+### Image Rotating
 
 ```
 $img->rotateIt( $degree, $uncoveredAColor);
@@ -149,7 +149,7 @@ $uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
      $blue= 0 - 255
  
 ```
-###Set Borders
+### Set Borders
 
 ```$img->setBorder($borderSize, $borderColor, $borderType);
  
@@ -164,7 +164,7 @@ $borderType >> (Optional - Default 'A')
     'R' >> Only Border Right
     'B' >> Only Border Bottom
 ```
-###Add Text
+### Add Text
 ```
 $img->setFont($fontNo, $fontSize, $fontColour);
 $img->setTextShadow($Ygap, $shadowColor);
@@ -202,7 +202,7 @@ $textPos >> Position Of Text
          Ex: '0,0'
  
 ```
-###Add New Image
+### Add New Image On Top
 ```
 $img->addNewImage($imgSrc, $imgSize, $imgPos, $layerEffect);
 
@@ -227,7 +227,7 @@ $layerEffect - Add Image With Layer Effect
            'EFF_NORMAL' ,  'EFF_OVERLAY'  , 'EFF_MULTIPLY'
  
 ```
-###Save Image
+### Save Image
 ```
 $img->saveIt($target_path, $createDir, $deleteSource)
 
