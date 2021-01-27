@@ -27,7 +27,14 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Include Files](#include-files)
-* [Usage](#usage)
+* [Basic Usage](#usage)
+   * [Resize Image](#resize-image)
+   * [Crop Image](#crop-image)
+   * [Image Rotating](#image-rotating)
+   * [Set Borders](#set-borders)
+   * [Add Text](#add-text)
+   * [Add New Image](#add-new-image)
+   * [Save Image](#save-image)
 
 
 
@@ -73,7 +80,7 @@ $img = new AWI($IMAGE);
  ```
 ###EDITING
 
-##Resize Image
+###Resize Image
 
 ```$img->resizeIt($width ,$height );
  
@@ -142,7 +149,7 @@ $uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
      $blue= 0 - 255
  
 ```
-##Set Borders
+###Set Borders
 
 ```$img->setBorder($borderSize, $borderColor, $borderType);
  
@@ -220,7 +227,7 @@ $layerEffect - Add Image With Layer Effect
            'EFF_NORMAL' ,  'EFF_OVERLAY'  , 'EFF_MULTIPLY'
  
 ```
-##Save Image
+###Save Image
 ```
 $img->saveIt($target_path, $createDir, $deleteSource)
 
@@ -235,7 +242,7 @@ $deleteSource - If Original Image Is On Your Server , (Default 0)
              0 - Do Not Delete Original File After Editing It
              1 - Delete Original File After Editing It
 ```
-##Get Edited Image Without Saving It
+Get Edited Image Without Saving It
 ```
 $img_name = $img->getImage64BaseString();
 ?>
