@@ -54,14 +54,6 @@ This Project Was Developed Using,
 
 ### Include Files
 
-```<?php
-namespace DR_AWI;
-require dirname(__FILE__) . '/inc/combine.php';
-use DR_AWI\AWI as AWI;
-```
-
-Getting Started With DR AWI
-
 ```
 <?php
 namespace DR_AWI;
@@ -82,7 +74,8 @@ $img = new AWI($IMAGE);
 
 ### Resize Image
 
-```$img->resizeIt($width ,$height );
+```
+$img->resizeIt($width ,$height );
  
  $width >> Preferred IMAGE WIDTH In PIXELS 
  $height >> Preferred IMAGE HEIGHT In PIXELS 
@@ -151,7 +144,8 @@ $uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
 ```
 ### Set Borders
 
-```$img->setBorder($borderSize, $borderColor, $borderType);
+```
+$img->setBorder($borderSize, $borderColor, $borderType);
  
 
  
