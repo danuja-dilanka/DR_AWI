@@ -66,22 +66,16 @@ use DR_AWI\AWI as AWI;
 
 ```
 $img = new AWI($IMAGE);
-```
-/*
  
  
  $IMAGE >> CAN BE AN URL OR A PATH OR A BASE64 ENCODED IMAGE STRING.
  Currently Supported Image Types : JPG/JPEG , PNG , WBMP , XBM , GIF
- 
- 
-*/
+ ```
 ###EDITING
 
 ##Resize Image
 
-```$img->resizeIt($width ,$height );```
- 
-/*
+```$img->resizeIt($width ,$height );
  
  $width >> Preferred IMAGE WIDTH In PIXELS 
  $height >> Preferred IMAGE HEIGHT In PIXELS 
@@ -96,14 +90,11 @@ $img = new AWI($IMAGE);
    $height :
          $height= $actualImageHeight / (2 ** $height) 
  
-*/
-##Crop Image
+```
+###Crop Image
 ```
 $img->set_size($width ,$height );
 $img->crop_starting_pos($position);
-```
- 
-/*
  
  $width >> Preferred IMAGE WIDTH To Crop (In PIXELS) 
  $height >> Preferred IMAGE HEIGHT To Crop (In PIXELS)
@@ -118,9 +109,6 @@ $img->crop_starting_pos($position);
    $height :
          $height= $actualImageHeight / (2 ** $height) 
  
-*/
- 
-/*
  
 * SET CROP POSITION ---------------------------------
  
@@ -139,12 +127,11 @@ $position >>
         $X = Postion X In Pixels 
         $Y = Postion Y In Pixels 
          Ex: '0,0'
-*/
-##Image Rotating
+ ```   
+###Image Rotating
 
-```$img->rotateIt( $degree, $uncoveredAColor);```
- 
-/*
+```
+$img->rotateIt( $degree, $uncoveredAColor);
  
 $degree >> DEGREE TO ROTATE IMAGE
  
@@ -154,12 +141,12 @@ $uncoveredAColor >> Uncovered Area Color (Optional - Default '0,0,0')
      $green= 0 - 255
      $blue= 0 - 255
  
-*/
+```
 ##Set Borders
 
-```$img->setBorder($borderSize, $borderColor, $borderType);```
+```$img->setBorder($borderSize, $borderColor, $borderType);
  
-/*
+
  
 $borderSize >> Border Size In Pixels
 $borderColor >> Border Color 
@@ -169,15 +156,14 @@ $borderType >> (Optional - Default 'A')
     'T' >> Only Border Top
     'R' >> Only Border Right
     'B' >> Only Border Bottom
-*/
-##Add Text
+```
+###Add Text
 ```
 $img->setFont($fontNo, $fontSize, $fontColour);
 $img->setTextShadow($Ygap, $shadowColor);
 $img->setCaption($theText, $textPos);
-```
+
  
-/*
 setFont() ---------------------------------------------
  
 $fontNo = 0-5 (Still 5 Fonts Available)
@@ -185,18 +171,13 @@ $fontSize = Font Size
 $fontColour = Font Color
      Ex: '0,0,0'
  
-*/
- 
-/*
+
 setTextShadow() -----------------------------------------
  
 $Ygap= The (Y) Gap Between TEXT And SHADOW
 $shadowColor= Shadow Color
      Ex: '0,0,0'
  
-*/
- 
-/*
 setCaption() --------------------------------------------
  
 $theText >> The Text That You Want To Display 
@@ -213,13 +194,11 @@ $textPos >> Position Of Text
         $Y = Postion Y In Pixels 
          Ex: '0,0'
  
-*/
-##Add New Image
+```
+###Add New Image
 ```
 $img->addNewImage($imgSrc, $imgSize, $imgPos, $layerEffect);
-```
- 
-/*
+
 $imgSrc - Path To Image File (Supported : JPG/JPEG , PNG , GIF , WBMP , XBM)
 $imgSize - New Image Size In Pixels 
             '250,250'
@@ -240,13 +219,13 @@ $layerEffect - Add Image With Layer Effect
            'EFF_REPLACE' ,  'EFF_ALPHABLEND' ,  
            'EFF_NORMAL' ,  'EFF_OVERLAY'  , 'EFF_MULTIPLY'
  
-*/
+```
 ##Save Image
 ```
 $img->saveIt($target_path, $createDir, $deleteSource)
-```
+
  
-/*
+
 $target_path - Path To Save Image
              Ex: 'FromHere/To'
 $createDir - If Path Not Exists Then Create Directory (Default 0)
@@ -255,7 +234,7 @@ $createDir - If Path Not Exists Then Create Directory (Default 0)
 $deleteSource - If Original Image Is On Your Server , (Default 0)
              0 - Do Not Delete Original File After Editing It
              1 - Delete Original File After Editing It
-*/
+```
 ##Get Edited Image Without Saving It
 ```
 $img_name = $img->getImage64BaseString();
