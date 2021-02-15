@@ -246,7 +246,8 @@ $img_name = $img->getImage64BaseString();
 
 <!-- SAMPLES -->
 ## Sample Image After Editing
-   
-![Test Image 1](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/7-add-another-text-with-another-size.png)
+
+![Test Image 1](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/1-original-image-after-resize-800,500.png | width=100)
+![Test Image 3](https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/tested/7-add-another-text-with-another-size.png | width=100)
 
 #### <a href="https://github.com/dilanka-rajapakshe/DR_AWI/tree/master/2.X/2.0v/tested">See All Images (Step wise)</a> 
