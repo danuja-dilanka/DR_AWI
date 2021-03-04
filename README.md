@@ -44,7 +44,6 @@
 PHP Image Editing Library For Image Cropping , Coping , Moving , Resizing , Scaling , Text Adding , Effect Adding , Rotating & Many More Functionality
 
 ### Built With
-This Project Was Developed Using,
 * [PHP](https://www.php.net/)
 
 
