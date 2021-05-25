@@ -8,6 +8,7 @@ use DR_AWI\AWI as AWI;
 
 $enc_img="logo-bg.jpg";
 $img = new AWI($enc_img,"1000,500");
+//$img->set_size(2,2);
 //$img->crop_starting_pos("ml");
 //$img->setNewBG("600,375", "200,0,0");
 
