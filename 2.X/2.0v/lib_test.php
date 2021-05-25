@@ -13,6 +13,20 @@ $img = new AWI($enc_img,"1000,500");
 //$img->setNewBG("600,375", "200,0,0");
 
 //$img->resizeIt(2, 2);
+//
+////$img->setBaseEffect("GRAY");
+////$img->setBorder(100, "0,0,0","r");
+//////$img->setBrightness(50);
+////$img->setBorder(100, "0,0,0", "l");
+////$img->setBorder(50, "0,0,0", "b");
+////$img->setBorder(25, "0,0,0", "r");
+////$img->setBorder(12, "0,0,0", "t");
+////$img->setTextShadow(2, "250,0,100");
+//////$img->rotateIt(15,"0,0,0");
+////$img->setFont(1, 30);
+////$img->setFont(2, 20);
+////$img->setCaption("2020-04-05", "BL");
+////$img->setBorder(200, "255,0,0", "l");
 ////$img->setBorder(50, "0,0,25", "l");
 //
 $img->setFont(3, 50);
