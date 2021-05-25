@@ -7,6 +7,7 @@ require dirname(__FILE__) . '/inc/combine.php';
 use DR_AWI\AWI as AWI;
 
 $img = new AWI("test.jpg");
+//$img->set_size(2,2);
 //$img->crop_starting_pos("ml");
 //$img->setNewBG("600,375", "200,0,0");
 $img->resizeIt(1, 1);
