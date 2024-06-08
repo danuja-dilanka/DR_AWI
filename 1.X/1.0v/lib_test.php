@@ -35,7 +35,7 @@ $img->setFont(2, 50);
 $img->setTopBlockColour("255,255,255");
 $img->addNewImage(null, "200,100", "200,0", "EFF_OVERLAY");
 
-//$img->setCaption("Hey! It's Me", "m(-50,45)");
+$img->setCaption("Hey! It's Me", "m(-50,45)");
 
 $img_name = $img->getImage64BaseString();
 ?>
