@@ -43,9 +43,9 @@ $img->addNewImage(null, "500,1000", "500,0", "EFF_OVERLAY");
 $img->addNewImage(null, "200,1000", "200,0", "EFF_OVERLAY");
 $img->addNewImage(null, "200,1000", "100,0", "EFF_OVERLAY");
 //
-////$img->setBorder(50, "0,0,25","l");
-////$img->setFont(1, 20, "255,255,255");
-////$img->setTopBlockColour("0,0,0");
+//$img->setBorder(50, "0,0,25","l");
+//$img->setFont(1, 20, "255,255,255");
+$img->setTopBlockColour("0,0,0");
 $img_name ="tested/".$img->saveIt('tested');
 $img_name = $img->getImage64BaseString();
 ?>
