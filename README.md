@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">DR_AWI LIBRARY</h3>
+  <h3 align="center">PHP Image Manipulation Library</h3>
   <h6 align="center"On Behalf of RajDev-TM</h6>
 
   <p align="center">
