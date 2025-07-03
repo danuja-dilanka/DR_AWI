@@ -3,7 +3,6 @@
 <br />
 <p align="center">
   <h3 align="center">PHP Image Manipulation Library</h3>
-  <h6 align="center">On Behalf of RajDev-TM</h6>
 
   <p align="center">
     <img src="https://github.com/dilanka-rajapakshe/DR_AWI/blob/master/2.X/2.0v/logo.png">
