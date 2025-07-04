@@ -40,8 +40,8 @@ $img->setCaption("DR_AWI", "tm(-250,250)");
 $img->setFont(2, 30);
 $img->setCaption("v2.0", "m(250,100)");
 $img->addNewImage(null, "500,1000", "500,0", "EFF_OVERLAY");
-$img->addNewImage(null, "200,1000", "200,0", "EFF_OVERLAY");
-$img->addNewImage(null, "200,1000", "100,0", "EFF_OVERLAY");
+// $img->addNewImage(null, "200,1000", "200,0", "EFF_OVERLAY");
+// $img->addNewImage(null, "200,1000", "100,0", "EFF_OVERLAY");
 //
 //$img->setBorder(50, "0,0,25","l");
 //$img->setFont(1, 20, "255,255,255");
